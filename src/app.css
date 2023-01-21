@@ -1,0 +1,33 @@
+#primary_wrapper {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 2vw;
+}
+#secondary_wrapper {
+	display: flex;
+	flex-direction: column;
+	padding: 2vw;
+	align-items: center;
+}
+
+@media screen and (max-width: 240px) {
+	#wrapper {
+		margin: 0;
+		padding: 0;
+	}
+	#points__container {
+		width: 100vw;
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+	.points__button-group {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+	}
+}
