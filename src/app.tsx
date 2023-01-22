@@ -1,10 +1,10 @@
-import {BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 
-import "./app.css";
-import NavBar from "@/Components/NavBar/NavBar";
 import Home from "@/Components/Home/Home";
-import TestComponent from "./Components/Test/Test";
+import NavBar from "@/Components/NavBar/NavBar";
+import  NotFound  from "@/Components/NotFound/NotFound";
+import "./app.css";
 
 export function App() {
 	return (
@@ -13,7 +13,7 @@ export function App() {
 			<BrowserRouter>
 				<Routes>
 					<Route path="/" element={<Home />} />
-					<Route path="*" element={<TestComponent />} />
+					<Route path="*" element={<NotFound />} />
 				</Routes>
 			</BrowserRouter>
 		</>

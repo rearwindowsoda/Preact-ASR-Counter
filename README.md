@@ -1,6 +1,6 @@
 # ASR Counter Fork
 
-This is a fork of a Express.js + Handlebars app that I wrote some time ago. This fork is about separating front-end from backend and adding typescript to both.
+This is a fork of an Express.js + Handlebars app that I wrote some time ago. This fork is about separating front-end from backend and adding typescript for both.
 
 > You can check the original app (Polish language only) [here](https://github.com/readwindowsoda/asr-public-git).
 
