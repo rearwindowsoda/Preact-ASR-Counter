@@ -1,17 +1,19 @@
 #primary_wrapper {
-	width: 100%;
+	width: 100vw;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-start;
 	padding: 2vw;
+	column-gap: 2vw;
 }
-#secondary_wrapper {
-	display: flex;
-	flex-direction: column;
+.secondary-wrapper {
+	max-width: 50%;
+	justify-content: center;
 	padding: 2vw;
 	align-items: center;
+	word-wrap: break-word;
 }
 
 @media screen and (max-width: 240px) {

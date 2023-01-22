@@ -19,6 +19,10 @@
 	color: #bad9b5;
 }
 
+.points-status-main {
+	font-size: 4em;
+}
+
 #points-error-message {
 	position: absolute;
 	z-index: 10;

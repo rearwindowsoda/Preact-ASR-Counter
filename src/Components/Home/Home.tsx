@@ -1,14 +1,16 @@
-import Points from "../Points/Points";
-import PointCountStatus from "../Points/PointsCountStatus";
+import Points from "@/Components/Points/Points";
+import PointCountStatus from "@/Components/Points/PointsCountStatus";
+import UserColumn from "@/Components/UserColumn/UserColumn";
 export default function Home(){
 	return (
 		<>
 			<div id="primary_wrapper">
-				<div id={"secondary_wrapper"}>
-					<h1>ASR Points</h1>
+				<div class="secondary-wrapper">
+					<h2>ASR Points</h2>
 					<PointCountStatus />
 					<Points />
 				</div>
+				<UserColumn />
 			</div>
 		</>
 	);
