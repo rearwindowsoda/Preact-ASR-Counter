@@ -6,15 +6,15 @@ This is a fork of a Express.js + Handlebars app that I wrote some time ago. This
 
 ## TODO:
 
-[ ] - Finish routing,
-[ ] - Optimize imports (aliases),
-[ ] - Finish all the components,
-[ ] - Preparing env variables and base urls for data fetching.
+- [ ] Finish all the components,
+- [ ] Optimize imports (aliases),
+- [ ] Finish routing,
+- [ ] Preparing env variables and base urls for data fetching.
 
 
 ### Stretch
 
-[ ] - Share types with backend :star_struck:, 
+- [ ]  Share types with backend :star_struck:, 
 
 
 There is no license file yet but you can use whatever you want 
