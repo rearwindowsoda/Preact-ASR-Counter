@@ -1,5 +1,6 @@
 import { useRef, useState } from "preact/hooks";
 import { JSXInternal } from "preact/src/jsx";
+import PointsErrorMessage from "./PointsErrorMessage";
 
 interface RemovePointsProps {
 	changeFunction: (event: JSXInternal.TargetedEvent) => void
@@ -9,14 +10,13 @@ export default function RemovePoints (props: RemovePointsProps) {
 	const [errorMessage, setErrorMessage] = useState<string | null>(null);
 	const inputRef = useRef<HTMLInputElement>(null);
 	
-	
 	function trackInputError(event: JSXInternal.TargetedEvent) {
 		props.changeFunction(event);
 		const currentInput = inputRef.current;
 		console.log(currentInput?.value);
 		
 		if(isNaN(parseInt((currentInput as unknown as HTMLInputElement)?.value))){
-			setErrorMessage("Only numbers are allowed in this input.");
+			setErrorMessage("Only numbers can be subtracted 🖩");
 			currentInput?.classList.add("is-invalid");
 		}
 	}
@@ -36,6 +36,7 @@ export default function RemovePoints (props: RemovePointsProps) {
 		
 	return (
 		<div class="form-group">
+			{errorMessage && <PointsErrorMessage message={errorMessage as unknown as string} />}
 			<label class="form-label mt-4">Subtract points:</label>
 			<div class="form-group">
 				<div class="input-group mb-3">
@@ -43,9 +44,12 @@ export default function RemovePoints (props: RemovePointsProps) {
 					<input type="number" class="form-control" min={0}  onfocusout={trackInputError} onfocusin={errorReset} ref={inputRef}/>
 					<span class="input-group-text">points</span>
 				</div>
-				{errorMessage ?? <div class="invalid-feedback">{errorMessage}</div>}
-				<div class="points__button-group"><button onClick={props.clickFunction} class="btn btn-secondary btn-sm">Subtract</button><button onClick={inputReset} class="btn btn-secondary btn-sm">Reset Input</button></div>
+				<div class="points__button-group">
+					<button onClick={props.clickFunction} class="btn btn-outline-secondary">Subtract</button>
+					<button onClick={inputReset} class="btn btn-outline-secondary">Reset Input</button>
+				</div>
 			</div>
+			
 		</div>
 	);
 	
