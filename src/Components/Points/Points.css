@@ -7,21 +7,26 @@
 .points__button-group {
 	display: flex;
 	flex-direction: row;
+	justify-content: center;
 	flex-wrap: nowrap;
 	gap: 20px;
 	margin: 10px 0;
-}
-
-.main-counter {
-	display: block;
-	padding: 10px;
-	color: #bad9b5;
-	border: #eff7cf 2px solid;
-	background-color: #268bd2;
 }
 
 .secondary-counter {
 	padding: 5px;
 	text-align: center;
 	color: #bad9b5;
+}
+
+#points-error-message {
+	position: absolute;
+	z-index: 10;
+}
+.was-validated .form-control:invalid,
+.form-control.is-invalid,
+.was-validated .form-control:valid,
+.form-control.is-valid {
+	padding-right: 0.75rem;
+	background-position: right calc(2.475em + 0.1875rem) center;
 }
