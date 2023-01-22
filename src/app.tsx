@@ -1,20 +1,21 @@
-import NavBar from "./Components/NavBar/NavBar";
-import Points from "./Components/Points/Points";
+import {BrowserRouter, Route, Routes } from "react-router-dom";
+
 
 import "./app.css";
-import PointCountStatus from "./Components/Points/PointsCountStatus";
+import NavBar from "@/Components/NavBar/NavBar";
+import Home from "@/Components/Home/Home";
+import TestComponent from "./Components/Test/Test";
 
 export function App() {
 	return (
 		<>
-			<NavBar />
-			<div id="primary_wrapper">
-				<div id={"secondary_wrapper"}>
-					<h1>ASR Points</h1>
-					<PointCountStatus />
-					<Points />
-				</div>
-			</div>
+			<NavBar/>
+			<BrowserRouter>
+				<Routes>
+					<Route path="/" element={<Home />} />
+					<Route path="*" element={<TestComponent />} />
+				</Routes>
+			</BrowserRouter>
 		</>
 	);
 }
