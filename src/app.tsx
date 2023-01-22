@@ -14,11 +14,6 @@ export function App() {
 					<PointCountStatus />
 					<Points />
 				</div>
-				<div id={"secondary_wrapper"}>
-					<h1>ASR Points</h1>
-					<PointCountStatus />
-					<Points />
-				</div>
 			</div>
 		</>
 	);
