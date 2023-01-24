@@ -1,3 +1,5 @@
+import UserAvatar from "./UserAvatar/UserAvatar";
+
 			
 export default function NavBar() {
 	return (<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -13,6 +15,8 @@ export default function NavBar() {
 						<a class="nav-link active" href="/user">User panel
 						</a>
 					</li>
+					{/* TODO: Change that later. Just for testing */}
+					{true && <UserAvatar />}
 				</ul>
 			</div></div><div></div></nav>
 	);
