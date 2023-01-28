@@ -1,4 +1,4 @@
-import { count } from "../../../Signals/PointSignal";
+import { count } from "@/Signals/PointSignal";
 
 
 

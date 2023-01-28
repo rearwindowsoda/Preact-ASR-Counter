@@ -1,4 +1,4 @@
-import changePoints from "./utils/points-functions";
+import changePoints from "@/Components/Points/utils/points-functions";
 import "./Points.css";
 
 			

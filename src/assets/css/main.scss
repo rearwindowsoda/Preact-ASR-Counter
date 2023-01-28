@@ -16,3 +16,12 @@
 	width: 2rem;
 	display: block;
 }
+
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid,
+.was-validated .form-control:valid,
+.form-control.is-valid {
+	padding-right: 0.75rem;
+	background-position: right calc(2.475em + 0.1875rem) center;
+}

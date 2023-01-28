@@ -19,18 +19,18 @@
 	color: #bad9b5;
 }
 
-.points-status-main {
-	font-size: 4em;
-}
-
 #points-error-message {
 	position: absolute;
-	z-index: 10;
+	z-index: 100;
 }
-.was-validated .form-control:invalid,
-.form-control.is-invalid,
-.was-validated .form-control:valid,
-.form-control.is-valid {
-	padding-right: 0.75rem;
-	background-position: right calc(2.475em + 0.1875rem) center;
+
+#subtract-alert {
+	margin: 0 auto;
+	padding: 10px;
+	max-width: fit-content;
+}
+
+#point-status {
+	color: #e0ff4f;
+	font-size: 4rem;
 }

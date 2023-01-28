@@ -1,10 +1,10 @@
 import { useEffect, useState } from "preact/hooks";
 import { JSXInternal } from "preact/src/jsx";
-import { count } from "../../Signals/PointSignal";
-import PointButton from "./PointButton";
+import { count } from "@/Signals/PointSignal";
+import PointButton from "@/Components/Points/PointButton";
+import PointsAlert from "@/Components/Points/PointsAlert";
+import RemovePoints from "@/Components/Points/RemovePoints";
 import "./Points.css";
-import PointsAlert from "./PointsAlert";
-import RemovePoints from "./RemovePoints";
 
 function Points() {
 	const [pointsToRemove, setPointsToRemove] = useState<number>(0);
@@ -44,7 +44,6 @@ function Points() {
 
 	return (
 		<>
-			{pointsError && <PointsAlert message={pointsError} handleStateChangeFunction={resetPointsError} /> }
 			<div id="points__container">
 
 				<div class="points__button-group">
@@ -65,6 +64,7 @@ function Points() {
 			</div>
 
 			<RemovePoints changeFunction={handlePointsToRemoveChange} clickFunction={removePointsOnClick} />
+			{pointsError && <PointsAlert message={pointsError} handleStateChangeFunction={resetPointsError} /> }
 		</>
 	);
 }
