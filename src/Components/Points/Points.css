@@ -1,9 +1,3 @@
-#points__container {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: nowrap;
-}
-
 .points__button-group {
 	display: flex;
 	flex-direction: row;

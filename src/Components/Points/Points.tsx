@@ -44,7 +44,7 @@ function Points() {
 
 	return (
 		<>
-			<div id="points__container">
+			<div class="point">
 
 				<div class="points__button-group">
 					<PointButton operator="+" value={1}></PointButton>
